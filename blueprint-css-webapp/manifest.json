@@ -1,17 +1,15 @@
 {
   "features": [
     [
-      "static-deployer/wcs-static-deployer-production-integration",
+      "static-deployer/production-fullstory",
       {
         "contextFilePaths": {},
         "dependencies": [
           "assets",
-          "codux-playground"
+          "codux-playground/hosted"
         ],
-        "filePath": "../dist/feature/wcs-static-deployer-production-integration.feature",
-        "envFilePaths": {
-          "main": "../dist/feature/wcs-static-deployer-production-integration.main.env"
-        },
+        "filePath": "../dist/feature/production-fullstory.feature",
+        "envFilePaths": {},
         "preloadFilePaths": {},
         "exportedEnvs": [],
         "resolvedContexts": {
@@ -19,7 +17,29 @@
           "main": "window"
         },
         "packageName": "@wixc3/static-deployer-feature",
-        "scopedName": "static-deployer/wcs-static-deployer-production-integration"
+        "scopedName": "static-deployer/production-fullstory"
+      }
+    ],
+    [
+      "codux-playground/hosted",
+      {
+        "contextFilePaths": {},
+        "dependencies": [
+          "codux-playground",
+          "fullstory",
+          "analytics-mx",
+          "website-links"
+        ],
+        "filePath": "@wixc3/codux-playground/dist/fixtures/hosted.feature",
+        "envFilePaths": {},
+        "preloadFilePaths": {},
+        "exportedEnvs": [],
+        "resolvedContexts": {
+          "processing": "worker",
+          "main": "window"
+        },
+        "packageName": "@wixc3/codux-playground",
+        "scopedName": "codux-playground/hosted"
       }
     ],
     [
@@ -175,7 +195,9 @@
           "typescript",
           "wcs-compilers",
           "json",
-          "third-party-component-discovery"
+          "third-party-component-discovery",
+          "walkthrough",
+          "wix-answers"
         ],
         "filePath": "@wixc3/codux-playground/dist/feature/codux-playground.feature",
         "envFilePaths": {
@@ -269,6 +291,65 @@
         },
         "packageName": "@wixc3/report-error-feature",
         "scopedName": "report-error/reporter"
+      }
+    ],
+    [
+      "fullstory",
+      {
+        "contextFilePaths": {},
+        "dependencies": [],
+        "filePath": "@wixc3/fullstory-feature/dist/feature/fullstory.feature",
+        "envFilePaths": {
+          "main": "@wixc3/fullstory-feature/dist/feature/fullstory.main.env"
+        },
+        "preloadFilePaths": {},
+        "exportedEnvs": [],
+        "resolvedContexts": {},
+        "packageName": "@wixc3/fullstory-feature",
+        "scopedName": "fullstory"
+      }
+    ],
+    [
+      "analytics-mx",
+      {
+        "contextFilePaths": {
+          "processing/live-server": "@wixc3/analytics-mx-feature/dist/feature/analytics-mx.processing.live-server.context",
+          "processing/worker": "@wixc3/analytics-mx-feature/dist/feature/analytics-mx.processing.worker.context"
+        },
+        "dependencies": [
+          "analytics"
+        ],
+        "filePath": "@wixc3/analytics-mx-feature/dist/feature/analytics-mx.feature",
+        "envFilePaths": {
+          "electron-main": "@wixc3/analytics-mx-feature/dist/feature/analytics-mx.electron-main.env",
+          "main": "@wixc3/analytics-mx-feature/dist/feature/analytics-mx.main.env"
+        },
+        "preloadFilePaths": {},
+        "exportedEnvs": [],
+        "resolvedContexts": {},
+        "packageName": "@wixc3/analytics-mx-feature",
+        "scopedName": "analytics-mx"
+      }
+    ],
+    [
+      "website-links",
+      {
+        "contextFilePaths": {},
+        "dependencies": [
+          "platform-capabilities",
+          "gui"
+        ],
+        "filePath": "@wixc3/website-links-feature/dist/feature/website-links.feature",
+        "envFilePaths": {
+          "main": "@wixc3/website-links-feature/dist/feature/website-links.main.env"
+        },
+        "preloadFilePaths": {},
+        "exportedEnvs": [],
+        "resolvedContexts": {
+          "main": "window"
+        },
+        "packageName": "@wixc3/website-links-feature",
+        "scopedName": "website-links"
       }
     ],
     [
@@ -1346,6 +1427,53 @@
       }
     ],
     [
+      "walkthrough",
+      {
+        "contextFilePaths": {},
+        "dependencies": [
+          "project",
+          "storage",
+          "gui",
+          "simulation-edit-view/simulation",
+          "platform-capabilities"
+        ],
+        "filePath": "@wixc3/walkthrough-feature/dist/feature/walkthrough.feature",
+        "envFilePaths": {
+          "main": "@wixc3/walkthrough-feature/dist/feature/walkthrough.main.env"
+        },
+        "preloadFilePaths": {},
+        "exportedEnvs": [],
+        "resolvedContexts": {
+          "processing": "worker",
+          "main": "window"
+        },
+        "packageName": "@wixc3/walkthrough-feature",
+        "scopedName": "walkthrough"
+      }
+    ],
+    [
+      "wix-answers",
+      {
+        "contextFilePaths": {},
+        "dependencies": [
+          "gui",
+          "analytics",
+          "react-resources"
+        ],
+        "filePath": "@wixc3/wix-answers-feature/dist/feature/wix-answers.feature",
+        "envFilePaths": {
+          "main": "@wixc3/wix-answers-feature/dist/feature/wix-answers.main.env"
+        },
+        "preloadFilePaths": {},
+        "exportedEnvs": [],
+        "resolvedContexts": {
+          "main": "window"
+        },
+        "packageName": "@wixc3/wix-answers-feature",
+        "scopedName": "wix-answers"
+      }
+    ],
+    [
       "symbol-schema-extract",
       {
         "contextFilePaths": {
@@ -1930,7 +2058,7 @@
     ]
   ],
   "defaultConfigName": "static-deployer/production",
-  "defaultFeatureName": "static-deployer/wcs-static-deployer-production-integration",
+  "defaultFeatureName": "static-deployer/production-fullstory",
   "entryPoints": {},
   "externalsFilePath": "/external-features.json"
 }
