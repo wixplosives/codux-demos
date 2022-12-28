@@ -28,7 +28,8 @@
           "codux-playground",
           "fullstory",
           "analytics-mx",
-          "website-links"
+          "website-links",
+          "wix-answers"
         ],
         "filePath": "@wixc3/codux-playground/dist/fixtures/hosted.feature",
         "envFilePaths": {},
@@ -197,7 +198,7 @@
           "json",
           "third-party-component-discovery",
           "walkthrough",
-          "wix-answers"
+          "classnames-plugins"
         ],
         "filePath": "@wixc3/codux-playground/dist/feature/codux-playground.feature",
         "envFilePaths": {
@@ -350,6 +351,28 @@
         },
         "packageName": "@wixc3/website-links-feature",
         "scopedName": "website-links"
+      }
+    ],
+    [
+      "wix-answers",
+      {
+        "contextFilePaths": {},
+        "dependencies": [
+          "gui",
+          "analytics",
+          "react-resources"
+        ],
+        "filePath": "@wixc3/wix-answers-feature/dist/feature/wix-answers.feature",
+        "envFilePaths": {
+          "main": "@wixc3/wix-answers-feature/dist/feature/wix-answers.main.env"
+        },
+        "preloadFilePaths": {},
+        "exportedEnvs": [],
+        "resolvedContexts": {
+          "main": "window"
+        },
+        "packageName": "@wixc3/wix-answers-feature",
+        "scopedName": "wix-answers"
       }
     ],
     [
@@ -799,7 +822,8 @@
         "dependencies": [
           "gui",
           "project",
-          "project-ui"
+          "project-ui",
+          "analytics"
         ],
         "filePath": "@wixc3/code-editor-feature/dist/feature/code-editor.feature",
         "envFilePaths": {
@@ -823,6 +847,7 @@
           "project",
           "component-discovery",
           "gui",
+          "home-screen",
           "typescript-assets",
           "analytics",
           "simulation-capabilities"
@@ -1431,6 +1456,7 @@
       {
         "contextFilePaths": {},
         "dependencies": [
+          "analytics",
           "project",
           "storage",
           "gui",
@@ -1452,25 +1478,42 @@
       }
     ],
     [
-      "wix-answers",
+      "classnames-plugins",
       {
         "contextFilePaths": {},
         "dependencies": [
-          "gui",
-          "analytics",
-          "react-resources"
+          "style-panel",
+          "project",
+          "code-execution"
         ],
-        "filePath": "@wixc3/wix-answers-feature/dist/feature/wix-answers.feature",
+        "filePath": "@wixc3/classnames-plugins-feature/dist/feature/classnames-plugins.feature",
         "envFilePaths": {
-          "main": "@wixc3/wix-answers-feature/dist/feature/wix-answers.main.env"
+          "processing": "@wixc3/classnames-plugins-feature/dist/feature/classnames-plugins.processing.env"
         },
         "preloadFilePaths": {},
         "exportedEnvs": [],
         "resolvedContexts": {
+          "processing": "worker",
           "main": "window"
         },
-        "packageName": "@wixc3/wix-answers-feature",
-        "scopedName": "wix-answers"
+        "packageName": "@wixc3/classnames-plugins-feature",
+        "scopedName": "classnames-plugins"
+      }
+    ],
+    [
+      "react-resources",
+      {
+        "contextFilePaths": {},
+        "dependencies": [],
+        "filePath": "@wixc3/react-resources-feature/dist/feature/react-resources.feature",
+        "envFilePaths": {
+          "main": "@wixc3/react-resources-feature/dist/feature/react-resources.main.env"
+        },
+        "preloadFilePaths": {},
+        "exportedEnvs": [],
+        "resolvedContexts": {},
+        "packageName": "@wixc3/react-resources-feature",
+        "scopedName": "react-resources"
       }
     ],
     [
@@ -1595,22 +1638,6 @@
         },
         "packageName": "@wixc3/git-revision-feature",
         "scopedName": "git-revision"
-      }
-    ],
-    [
-      "react-resources",
-      {
-        "contextFilePaths": {},
-        "dependencies": [],
-        "filePath": "@wixc3/react-resources-feature/dist/feature/react-resources.feature",
-        "envFilePaths": {
-          "main": "@wixc3/react-resources-feature/dist/feature/react-resources.main.env"
-        },
-        "preloadFilePaths": {},
-        "exportedEnvs": [],
-        "resolvedContexts": {},
-        "packageName": "@wixc3/react-resources-feature",
-        "scopedName": "react-resources"
       }
     ],
     [
@@ -2059,6 +2086,5 @@
   ],
   "defaultConfigName": "static-deployer/production",
   "defaultFeatureName": "static-deployer/production-fullstory",
-  "entryPoints": {},
-  "externalsFilePath": "/external-features.json"
+  "entryPoints": {}
 }
