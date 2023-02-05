@@ -8,9 +8,9 @@
           "assets",
           "codux-playground"
         ],
-        "filePath": "../dist/feature/wcs-static-deployer-production-integration.feature",
+        "filePath": "../../dist/feature/wcs-static-deployer-production-integration.feature",
         "envFilePaths": {
-          "main": "../dist/feature/wcs-static-deployer-production-integration.main.env"
+          "main": "../../dist/feature/wcs-static-deployer-production-integration.main.env"
         },
         "preloadFilePaths": {},
         "exportedEnvs": [],
