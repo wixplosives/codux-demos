@@ -225,7 +225,7 @@
           "file-components",
           "simple-ast",
           "typescript",
-          "typescript/typescript-compiler",
+          "typescript-compiler",
           "file-assets"
         ],
         "filePath": "@wixc3/simulation-capabilities-feature/dist/feature/simulation-capabilities.feature",
@@ -372,63 +372,6 @@
         },
         "packageName": "@wixc3/wix-answers-feature",
         "scopedName": "wix-answers"
-      }
-    ],
-    [
-      "typescript/typescript-compiler",
-      {
-        "contextFilePaths": {},
-        "dependencies": [
-          "project",
-          "compilation",
-          "code-execution",
-          "typescript"
-        ],
-        "filePath": "@wixc3/typescript-feature/dist/feature/typescript-compiler.feature",
-        "envFilePaths": {
-          "processing": "@wixc3/typescript-feature/dist/feature/typescript-compiler.processing.env"
-        },
-        "preloadFilePaths": {},
-        "exportedEnvs": [],
-        "resolvedContexts": {
-          "main": "window",
-          "processing": "worker"
-        },
-        "packageName": "@wixc3/typescript-feature",
-        "scopedName": "typescript/typescript-compiler"
-      }
-    ],
-    [
-      "typescript",
-      {
-        "contextFilePaths": {
-          "processing/live-server": "@wixc3/typescript-feature/dist/feature/typescript.processing.live-server.context",
-          "processing/worker": "@wixc3/typescript-feature/dist/feature/typescript.processing.worker.context"
-        },
-        "dependencies": [
-          "project",
-          "code-languages",
-          "compilation",
-          "code-execution",
-          "file-assets",
-          "environment-info",
-          "user-application-server"
-        ],
-        "filePath": "@wixc3/typescript-feature/dist/feature/typescript.feature",
-        "envFilePaths": {
-          "main": "@wixc3/typescript-feature/dist/feature/typescript.main.env",
-          "processing": "@wixc3/typescript-feature/dist/feature/typescript.processing.env"
-        },
-        "preloadFilePaths": {
-          "processing/live-server": "@wixc3/typescript-feature/dist/feature/typescript.processing.live-server.preload"
-        },
-        "exportedEnvs": [],
-        "resolvedContexts": {
-          "main": "window",
-          "processing": "worker"
-        },
-        "packageName": "@wixc3/typescript-feature",
-        "scopedName": "typescript"
       }
     ],
     [
@@ -599,23 +542,10 @@
         "filePath": "@wixc3/sass-feature/dist/feature/sass.feature",
         "envFilePaths": {
           "main": "@wixc3/sass-feature/dist/feature/sass.main.env",
-          "processing": "@wixc3/sass-feature/dist/feature/sass.processing.env",
-          "sass": "@wixc3/sass-feature/dist/feature/sass.sass.env"
+          "processing": "@wixc3/sass-feature/dist/feature/sass.processing.env"
         },
         "preloadFilePaths": {},
-        "exportedEnvs": [
-          {
-            "name": "sass",
-            "type": "node",
-            "env": {
-              "env": "sass",
-              "envType": "node",
-              "endpointType": "single",
-              "dependencies": []
-            },
-            "flatDependencies": []
-          }
-        ],
+        "exportedEnvs": [],
         "resolvedContexts": {
           "main": "window",
           "processing": "worker"
@@ -760,14 +690,13 @@
     [
       "css-modules",
       {
-        "contextFilePaths": {
-          "processing/live-server": "@wixc3/css-modules-feature/dist/feature/css-modules.processing.live-server.context"
-        },
+        "contextFilePaths": {},
         "dependencies": [
           "project",
           "code-languages",
           "compilation",
-          "css"
+          "css",
+          "code-execution"
         ],
         "filePath": "@wixc3/css-modules-feature/dist/feature/css-modules.feature",
         "envFilePaths": {
@@ -876,9 +805,12 @@
           "css",
           "editing",
           "global-events",
+          "open-in-ide",
+          "project",
           "react-resources",
           "engine-resources/resource",
           "simulation-edit-view/simulation",
+          "simple-ast",
           "simulation-log",
           "wix-answers"
         ],
@@ -1068,7 +1000,8 @@
           "platform-capabilities",
           "simple-ast",
           "analytics",
-          "wix-answers"
+          "wix-answers",
+          "add-panel"
         ],
         "filePath": "@wixc3/new-component-feature/dist/feature/new-component.feature",
         "envFilePaths": {
@@ -1137,13 +1070,15 @@
           "autodocs",
           "code-views",
           "gui",
+          "open-in-ide",
           "simulation-edit-view/simulation",
           "simulation-env-editor",
           "simple-ast",
           "editing",
           "symbol-schema-extract",
           "project",
-          "wix-answers"
+          "wix-answers",
+          "code-execution"
         ],
         "filePath": "@wixc3/props-editor-feature/dist/feature/props-editor.feature",
         "envFilePaths": {
@@ -1382,12 +1317,44 @@
       }
     ],
     [
+      "typescript",
+      {
+        "contextFilePaths": {
+          "processing/live-server": "@wixc3/typescript-feature/dist/feature/typescript.processing.live-server.context",
+          "processing/worker": "@wixc3/typescript-feature/dist/feature/typescript.processing.worker.context"
+        },
+        "dependencies": [
+          "project",
+          "code-languages",
+          "compilation",
+          "code-execution",
+          "file-assets",
+          "environment-info"
+        ],
+        "filePath": "@wixc3/typescript-feature/dist/feature/typescript.feature",
+        "envFilePaths": {
+          "main": "@wixc3/typescript-feature/dist/feature/typescript.main.env",
+          "processing": "@wixc3/typescript-feature/dist/feature/typescript.processing.env"
+        },
+        "preloadFilePaths": {
+          "processing/live-server": "@wixc3/typescript-feature/dist/feature/typescript.processing.live-server.preload"
+        },
+        "exportedEnvs": [],
+        "resolvedContexts": {
+          "main": "window",
+          "processing": "worker"
+        },
+        "packageName": "@wixc3/typescript-feature",
+        "scopedName": "typescript"
+      }
+    ],
+    [
       "wcs-compilers",
       {
         "contextFilePaths": {},
         "dependencies": [
           "stylable/stylable-compiler",
-          "typescript/typescript-compiler",
+          "typescript-compiler",
           "css",
           "css-modules",
           "sass",
@@ -1517,7 +1484,7 @@
           "engine-resources/resource",
           "file-assets",
           "code-execution",
-          "typescript/typescript-compiler"
+          "typescript-compiler"
         ],
         "filePath": "@wixc3/typescript-assets-feature/dist/feature/typescript-assets.feature",
         "envFilePaths": {
@@ -1605,6 +1572,71 @@
       }
     ],
     [
+      "typescript-compiler",
+      {
+        "contextFilePaths": {
+          "processing/live-server": "@wixc3/typescript-compiler-feature/dist/feature/typescript-compiler.processing.live-server.context",
+          "processing/worker": "@wixc3/typescript-compiler-feature/dist/feature/typescript-compiler.processing.worker.context"
+        },
+        "dependencies": [
+          "engine-core/communication",
+          "project",
+          "compilation",
+          "code-execution",
+          "typescript",
+          "user-application-server"
+        ],
+        "filePath": "@wixc3/typescript-compiler-feature/dist/feature/typescript-compiler.feature",
+        "envFilePaths": {
+          "processing": "@wixc3/typescript-compiler-feature/dist/feature/typescript-compiler.processing.env",
+          "ts-webworker": "@wixc3/typescript-compiler-feature/dist/feature/typescript-compiler.ts-webworker.env",
+          "window-renderer": "@wixc3/typescript-compiler-feature/dist/feature/typescript-compiler.window-renderer.env"
+        },
+        "preloadFilePaths": {},
+        "exportedEnvs": [
+          {
+            "name": "ts-webworker",
+            "type": "webworker",
+            "env": {
+              "env": "ts-webworker",
+              "envType": "webworker",
+              "endpointType": "multi",
+              "dependencies": []
+            },
+            "flatDependencies": []
+          }
+        ],
+        "resolvedContexts": {
+          "main": "window",
+          "processing": "worker"
+        },
+        "packageName": "@wixc3/typescript-compiler-feature",
+        "scopedName": "typescript-compiler"
+      }
+    ],
+    [
+      "open-in-ide",
+      {
+        "contextFilePaths": {
+          "processing/live-server": "@wixc3/open-in-ide-feature/dist/feature/open-in-ide.processing.live-server.context",
+          "processing/worker": "@wixc3/open-in-ide-feature/dist/feature/open-in-ide.processing.worker.context"
+        },
+        "dependencies": [
+          "analytics"
+        ],
+        "filePath": "@wixc3/open-in-ide-feature/dist/feature/open-in-ide.feature",
+        "envFilePaths": {
+          "main": "@wixc3/open-in-ide-feature/dist/feature/open-in-ide.main.env",
+          "processing": "@wixc3/open-in-ide-feature/dist/feature/open-in-ide.processing.env"
+        },
+        "preloadFilePaths": {},
+        "exportedEnvs": [],
+        "resolvedContexts": {},
+        "packageName": "@wixc3/open-in-ide-feature",
+        "scopedName": "open-in-ide"
+      }
+    ],
+    [
       "react-resources",
       {
         "contextFilePaths": {},
@@ -1618,30 +1650,6 @@
         "resolvedContexts": {},
         "packageName": "@wixc3/react-resources-feature",
         "scopedName": "react-resources"
-      }
-    ],
-    [
-      "code-languages",
-      {
-        "contextFilePaths": {},
-        "dependencies": [
-          "gui",
-          "project-ui",
-          "code-editor"
-        ],
-        "filePath": "@wixc3/code-languages-feature/dist/feature/code-languages.feature",
-        "envFilePaths": {
-          "main": "@wixc3/code-languages-feature/dist/feature/code-languages.main.env",
-          "processing": "@wixc3/code-languages-feature/dist/feature/code-languages.processing.env"
-        },
-        "preloadFilePaths": {},
-        "exportedEnvs": [],
-        "resolvedContexts": {
-          "processing": "worker",
-          "main": "window"
-        },
-        "packageName": "@wixc3/code-languages-feature",
-        "scopedName": "code-languages"
       }
     ],
     [
@@ -1693,6 +1701,30 @@
         "resolvedContexts": {},
         "packageName": "@wixc3/storage-feature",
         "scopedName": "storage"
+      }
+    ],
+    [
+      "code-languages",
+      {
+        "contextFilePaths": {},
+        "dependencies": [
+          "gui",
+          "project-ui",
+          "code-editor"
+        ],
+        "filePath": "@wixc3/code-languages-feature/dist/feature/code-languages.feature",
+        "envFilePaths": {
+          "main": "@wixc3/code-languages-feature/dist/feature/code-languages.main.env",
+          "processing": "@wixc3/code-languages-feature/dist/feature/code-languages.processing.env"
+        },
+        "preloadFilePaths": {},
+        "exportedEnvs": [],
+        "resolvedContexts": {
+          "processing": "worker",
+          "main": "window"
+        },
+        "packageName": "@wixc3/code-languages-feature",
+        "scopedName": "code-languages"
       }
     ],
     [
@@ -1806,10 +1838,12 @@
           "analytics",
           "gui",
           "code-execution",
+          "open-in-ide",
           "symbol-schema-extract",
           "simulation-preview",
           "simulation-capabilities",
           "actions",
+          "typescript-compiler",
           "engine-core/communication",
           "simulation-log",
           "project-ui",
@@ -1843,6 +1877,7 @@
           "css",
           "editing",
           "gui",
+          "open-in-ide",
           "project",
           "platform-capabilities",
           "react-resources",
@@ -2002,7 +2037,8 @@
           "project",
           "typescript",
           "engine-core/communication",
-          "analytics"
+          "analytics",
+          "open-in-ide"
         ],
         "filePath": "@wixc3/code-views-feature/dist/feature/code-views.feature",
         "envFilePaths": {
