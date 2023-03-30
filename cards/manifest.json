@@ -172,7 +172,6 @@
           "compilation",
           "boards-panel",
           "computed-styles",
-          "drag-on-stage",
           "environment-info",
           "file-components",
           "file-preview",
@@ -719,15 +718,16 @@
       {
         "contextFilePaths": {},
         "dependencies": [
-          "board-to-snippet",
           "code-execution",
           "component-discovery",
-          "compilation",
           "editing",
+          "demo-discovery",
           "file-components",
+          "file-assets",
           "gui",
           "project",
           "simple-ast",
+          "typescript-assets",
           "wix-answers"
         ],
         "filePath": "@wixc3/add-panel-feature/dist/feature/add-panel.feature",
@@ -802,7 +802,6 @@
       {
         "contextFilePaths": {},
         "dependencies": [
-          "gui",
           "css",
           "editing",
           "global-events",
@@ -852,31 +851,6 @@
         },
         "packageName": "@wixc3/css-modules-editing-feature",
         "scopedName": "css-modules-editing"
-      }
-    ],
-    [
-      "drag-on-stage",
-      {
-        "contextFilePaths": {},
-        "dependencies": [
-          "editing",
-          "simulation-edit-view/simulation",
-          "gui",
-          "simple-ast"
-        ],
-        "filePath": "@wixc3/drag-on-stage-feature/dist/feature/drag-on-stage.feature",
-        "envFilePaths": {
-          "main": "@wixc3/drag-on-stage-feature/dist/feature/drag-on-stage.main.env",
-          "preview": "@wixc3/drag-on-stage-feature/dist/feature/drag-on-stage.preview.env"
-        },
-        "preloadFilePaths": {},
-        "exportedEnvs": [],
-        "resolvedContexts": {
-          "processing": "worker",
-          "main": "window"
-        },
-        "packageName": "@wixc3/drag-on-stage-feature",
-        "scopedName": "drag-on-stage"
       }
     ],
     [
@@ -1098,7 +1072,6 @@
           "gui",
           "open-in-ide",
           "simulation-edit-view/simulation",
-          "storage",
           "simulation-env-editor",
           "simple-ast",
           "editing",
@@ -1162,7 +1135,6 @@
           "simulation-capabilities",
           "simulation-preview",
           "analytics",
-          "storage",
           "actions",
           "wix-answers"
         ],
@@ -1616,7 +1588,6 @@
         ],
         "filePath": "@wixc3/typescript-compiler-feature/dist/feature/typescript-compiler.feature",
         "envFilePaths": {
-          "main": "@wixc3/typescript-compiler-feature/dist/feature/typescript-compiler.main.env",
           "processing": "@wixc3/typescript-compiler-feature/dist/feature/typescript-compiler.processing.env",
           "ts-webworker": "@wixc3/typescript-compiler-feature/dist/feature/typescript-compiler.ts-webworker.env",
           "window-renderer": "@wixc3/typescript-compiler-feature/dist/feature/typescript-compiler.window-renderer.env"
@@ -1809,31 +1780,6 @@
       }
     ],
     [
-      "board-to-snippet",
-      {
-        "contextFilePaths": {},
-        "dependencies": [
-          "project",
-          "simple-ast",
-          "code-execution",
-          "editing",
-          "style-panel"
-        ],
-        "filePath": "@wixc3/board-to-snippet-feature/dist/feature/board-to-snippet.feature",
-        "envFilePaths": {
-          "processing": "@wixc3/board-to-snippet-feature/dist/feature/board-to-snippet.processing.env"
-        },
-        "preloadFilePaths": {},
-        "exportedEnvs": [],
-        "resolvedContexts": {
-          "processing": "worker",
-          "main": "window"
-        },
-        "packageName": "@wixc3/board-to-snippet-feature",
-        "scopedName": "board-to-snippet"
-      }
-    ],
-    [
       "component-discovery",
       {
         "contextFilePaths": {},
@@ -1855,6 +1801,29 @@
         },
         "packageName": "@wixc3/component-discovery-feature",
         "scopedName": "component-discovery"
+      }
+    ],
+    [
+      "demo-discovery",
+      {
+        "contextFilePaths": {},
+        "dependencies": [
+          "discovery",
+          "project",
+          "file-assets"
+        ],
+        "filePath": "@wixc3/demo-discovery-feature/dist/feature/demo-discovery.feature",
+        "envFilePaths": {
+          "processing": "@wixc3/demo-discovery-feature/dist/feature/demo-discovery.processing.env"
+        },
+        "preloadFilePaths": {},
+        "exportedEnvs": [],
+        "resolvedContexts": {
+          "main": "window",
+          "processing": "worker"
+        },
+        "packageName": "@wixc3/demo-discovery-feature",
+        "scopedName": "demo-discovery"
       }
     ],
     [
@@ -1933,29 +1902,6 @@
         },
         "packageName": "@wixc3/style-panel-feature",
         "scopedName": "style-panel"
-      }
-    ],
-    [
-      "demo-discovery",
-      {
-        "contextFilePaths": {},
-        "dependencies": [
-          "discovery",
-          "project",
-          "file-assets"
-        ],
-        "filePath": "@wixc3/demo-discovery-feature/dist/feature/demo-discovery.feature",
-        "envFilePaths": {
-          "processing": "@wixc3/demo-discovery-feature/dist/feature/demo-discovery.processing.env"
-        },
-        "preloadFilePaths": {},
-        "exportedEnvs": [],
-        "resolvedContexts": {
-          "main": "window",
-          "processing": "worker"
-        },
-        "packageName": "@wixc3/demo-discovery-feature",
-        "scopedName": "demo-discovery"
       }
     ],
     [
