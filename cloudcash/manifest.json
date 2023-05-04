@@ -148,9 +148,7 @@
         "envFilePaths": {
           "processing": "@wixc3/assets-feature/dist/feature/assets.processing.env"
         },
-        "preloadFilePaths": {
-          "processing/live-server": "@wixc3/assets-feature/dist/feature/assets.processing.live-server.preload"
-        },
+        "preloadFilePaths": {},
         "exportedEnvs": [],
         "resolvedContexts": {
           "main": "window",
@@ -194,7 +192,7 @@
           "stylable-editing",
           "stylable/stylable-language-service",
           "typescript",
-          "wcs-compilers",
+          "codux-compilers",
           "json",
           "third-party-component-discovery",
           "walkthrough",
@@ -220,7 +218,6 @@
       {
         "contextFilePaths": {},
         "dependencies": [
-          "code-execution",
           "project",
           "git-revisions",
           "file-components",
@@ -607,7 +604,6 @@
       {
         "contextFilePaths": {},
         "dependencies": [
-          "code-execution",
           "project",
           "project-ui"
         ],
@@ -631,7 +627,7 @@
       {
         "contextFilePaths": {},
         "dependencies": [
-          "wcs-server"
+          "http-server"
         ],
         "filePath": "@wixc3/user-application-server-feature/dist/feature/user-application-server.feature",
         "envFilePaths": {
@@ -696,8 +692,7 @@
           "project",
           "code-languages",
           "compilation",
-          "css",
-          "code-execution"
+          "css"
         ],
         "filePath": "@wixc3/css-modules-feature/dist/feature/css-modules.feature",
         "envFilePaths": {
@@ -720,7 +715,6 @@
         "contextFilePaths": {},
         "dependencies": [
           "board-to-snippet",
-          "code-execution",
           "component-discovery",
           "compilation",
           "editing",
@@ -912,7 +906,6 @@
       {
         "contextFilePaths": {},
         "dependencies": [
-          "code-execution",
           "project",
           "simple-ast",
           "demo-discovery",
@@ -1070,8 +1063,7 @@
           "style-panel",
           "project",
           "sass",
-          "simple-ast",
-          "code-execution"
+          "simple-ast"
         ],
         "filePath": "@wixc3/sass-editing-feature/dist/feature/sass-editing.feature",
         "envFilePaths": {
@@ -1132,7 +1124,8 @@
           "project",
           "project-ui",
           "analytics",
-          "actions"
+          "actions",
+          "gui"
         ],
         "filePath": "@wixc3/simulation-code-editor-feature/dist/feature/simulation-code-editor.feature",
         "envFilePaths": {
@@ -1246,7 +1239,7 @@
           "actions",
           "environment-info",
           "global-events",
-          "wcs-server"
+          "http-server"
         ],
         "filePath": "@wixc3/simulation-preview-feature/dist/feature/simulation-preview.feature",
         "envFilePaths": {
@@ -1355,7 +1348,6 @@
           "project",
           "code-languages",
           "compilation",
-          "code-execution",
           "file-assets",
           "environment-info"
         ],
@@ -1377,7 +1369,7 @@
       }
     ],
     [
-      "wcs-compilers",
+      "codux-compilers",
       {
         "contextFilePaths": {},
         "dependencies": [
@@ -1389,7 +1381,7 @@
           "assets",
           "user-application-server"
         ],
-        "filePath": "@wixc3/wcs-compilers-feature/dist/feature/wcs-compilers.feature",
+        "filePath": "@wixc3/codux-compilers-feature/dist/feature/codux-compilers.feature",
         "envFilePaths": {},
         "preloadFilePaths": {},
         "exportedEnvs": [],
@@ -1397,8 +1389,8 @@
           "main": "window",
           "processing": "live-server"
         },
-        "packageName": "@wixc3/wcs-compilers-feature",
-        "scopedName": "wcs-compilers"
+        "packageName": "@wixc3/codux-compilers-feature",
+        "scopedName": "codux-compilers"
       }
     ],
     [
@@ -1408,8 +1400,7 @@
         "dependencies": [
           "project",
           "code-languages",
-          "code-editor",
-          "code-execution"
+          "code-editor"
         ],
         "filePath": "@wixc3/json-feature/dist/feature/json.feature",
         "envFilePaths": {
@@ -1458,8 +1449,7 @@
         "contextFilePaths": {},
         "dependencies": [
           "style-panel",
-          "project",
-          "code-execution"
+          "project"
         ],
         "filePath": "@wixc3/classnames-plugins-feature/dist/feature/classnames-plugins.feature",
         "envFilePaths": {
@@ -1783,20 +1773,20 @@
       }
     ],
     [
-      "wcs-server",
+      "http-server",
       {
         "contextFilePaths": {
-          "processing/live-server": "@wixc3/wcs-server-feature/dist/feature/wcs-server.processing.live-server.context",
-          "processing/worker": "@wixc3/wcs-server-feature/dist/feature/wcs-server.processing.worker.context"
+          "processing/live-server": "@wixc3/http-server-feature/dist/feature/http-server.processing.live-server.context",
+          "processing/worker": "@wixc3/http-server-feature/dist/feature/http-server.processing.worker.context"
         },
         "dependencies": [
           "engine-core/communication",
           "engine-core/runtime-metadata",
           "project"
         ],
-        "filePath": "@wixc3/wcs-server-feature/dist/feature/wcs-server.feature",
+        "filePath": "@wixc3/http-server-feature/dist/feature/http-server.feature",
         "envFilePaths": {
-          "processing": "@wixc3/wcs-server-feature/dist/feature/wcs-server.processing.env"
+          "processing": "@wixc3/http-server-feature/dist/feature/http-server.processing.env"
         },
         "preloadFilePaths": {},
         "exportedEnvs": [],
@@ -1804,8 +1794,8 @@
           "main": "window",
           "processing": "worker"
         },
-        "packageName": "@wixc3/wcs-server-feature",
-        "scopedName": "wcs-server"
+        "packageName": "@wixc3/http-server-feature",
+        "scopedName": "http-server"
       }
     ],
     [
@@ -1815,7 +1805,6 @@
         "dependencies": [
           "project",
           "simple-ast",
-          "code-execution",
           "editing",
           "style-panel"
         ],
@@ -2008,7 +1997,7 @@
           "sass",
           "stylable/stylable-compiler",
           "project",
-          "wcs-server"
+          "http-server"
         ],
         "filePath": "@wixc3/board-thumbnail-feature/dist/feature/board-thumbnail.feature",
         "envFilePaths": {
