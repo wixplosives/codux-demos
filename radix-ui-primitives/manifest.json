@@ -1,15 +1,17 @@
 {
   "features": [
     [
-      "static-deployer/production-fullstory",
+      "static-deployer/wcs-static-deployer-production-integration",
       {
         "contextFilePaths": {},
         "dependencies": [
           "assets",
-          "codux-playground/hosted"
+          "codux-playground"
         ],
-        "filePath": "../../dist/feature/production-fullstory.feature",
-        "envFilePaths": {},
+        "filePath": "../../dist/feature/wcs-static-deployer-production-integration.feature",
+        "envFilePaths": {
+          "main": "../../dist/feature/wcs-static-deployer-production-integration.main.env"
+        },
         "preloadFilePaths": {},
         "exportedEnvs": [],
         "resolvedContexts": {
@@ -17,30 +19,7 @@
           "main": "window"
         },
         "packageName": "@wixc3/static-deployer-feature",
-        "scopedName": "static-deployer/production-fullstory"
-      }
-    ],
-    [
-      "codux-playground/hosted",
-      {
-        "contextFilePaths": {},
-        "dependencies": [
-          "codux-playground",
-          "fullstory",
-          "analytics-mx",
-          "website-links",
-          "wix-answers"
-        ],
-        "filePath": "@wixc3/codux-playground/dist/fixtures/hosted.feature",
-        "envFilePaths": {},
-        "preloadFilePaths": {},
-        "exportedEnvs": [],
-        "resolvedContexts": {
-          "processing": "worker",
-          "main": "window"
-        },
-        "packageName": "@wixc3/codux-playground",
-        "scopedName": "codux-playground/hosted"
+        "scopedName": "static-deployer/wcs-static-deployer-production-integration"
       }
     ],
     [
@@ -289,65 +268,6 @@
         },
         "packageName": "@wixc3/report-error-feature",
         "scopedName": "report-error/reporter"
-      }
-    ],
-    [
-      "fullstory",
-      {
-        "contextFilePaths": {},
-        "dependencies": [],
-        "filePath": "@wixc3/fullstory-feature/dist/feature/fullstory.feature",
-        "envFilePaths": {
-          "main": "@wixc3/fullstory-feature/dist/feature/fullstory.main.env"
-        },
-        "preloadFilePaths": {},
-        "exportedEnvs": [],
-        "resolvedContexts": {},
-        "packageName": "@wixc3/fullstory-feature",
-        "scopedName": "fullstory"
-      }
-    ],
-    [
-      "analytics-mx",
-      {
-        "contextFilePaths": {
-          "processing/live-server": "@wixc3/analytics-mx-feature/dist/feature/analytics-mx.processing.live-server.context",
-          "processing/worker": "@wixc3/analytics-mx-feature/dist/feature/analytics-mx.processing.worker.context"
-        },
-        "dependencies": [
-          "analytics"
-        ],
-        "filePath": "@wixc3/analytics-mx-feature/dist/feature/analytics-mx.feature",
-        "envFilePaths": {
-          "electron-main": "@wixc3/analytics-mx-feature/dist/feature/analytics-mx.electron-main.env",
-          "main": "@wixc3/analytics-mx-feature/dist/feature/analytics-mx.main.env"
-        },
-        "preloadFilePaths": {},
-        "exportedEnvs": [],
-        "resolvedContexts": {},
-        "packageName": "@wixc3/analytics-mx-feature",
-        "scopedName": "analytics-mx"
-      }
-    ],
-    [
-      "website-links",
-      {
-        "contextFilePaths": {},
-        "dependencies": [
-          "platform-capabilities",
-          "gui"
-        ],
-        "filePath": "@wixc3/website-links-feature/dist/feature/website-links.feature",
-        "envFilePaths": {
-          "main": "@wixc3/website-links-feature/dist/feature/website-links.main.env"
-        },
-        "preloadFilePaths": {},
-        "exportedEnvs": [],
-        "resolvedContexts": {
-          "main": "window"
-        },
-        "packageName": "@wixc3/website-links-feature",
-        "scopedName": "website-links"
       }
     ],
     [
@@ -2145,6 +2065,6 @@
     ]
   ],
   "defaultConfigName": "static-deployer/production",
-  "defaultFeatureName": "static-deployer/production-fullstory",
+  "defaultFeatureName": "static-deployer/wcs-static-deployer-production-integration",
   "entryPoints": {}
 }
