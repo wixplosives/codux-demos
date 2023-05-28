@@ -8,7 +8,7 @@
           "assets",
           "codux-playground/hosted"
         ],
-        "filePath": "../dist/feature/production-fullstory.feature",
+        "filePath": "../../dist/feature/production-fullstory.feature",
         "envFilePaths": {},
         "preloadFilePaths": {},
         "exportedEnvs": [],
@@ -714,6 +714,7 @@
       {
         "contextFilePaths": {},
         "dependencies": [
+          "analytics",
           "board-to-snippet",
           "component-discovery",
           "compilation",
