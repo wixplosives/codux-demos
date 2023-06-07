@@ -14,6 +14,7 @@
         "exportedEnvs": [],
         "resolvedContexts": {
           "processing": "worker",
+          "transpilation": "worker",
           "main": "window"
         },
         "packageName": "@wixc3/static-deployer-feature",
@@ -37,6 +38,7 @@
         "exportedEnvs": [],
         "resolvedContexts": {
           "processing": "worker",
+          "transpilation": "worker",
           "main": "window"
         },
         "packageName": "@wixc3/codux-playground",
@@ -207,10 +209,71 @@
         "exportedEnvs": [],
         "resolvedContexts": {
           "processing": "worker",
+          "transpilation": "worker",
           "main": "window"
         },
         "packageName": "@wixc3/codux-playground",
         "scopedName": "codux-playground"
+      }
+    ],
+    [
+      "typescript-compiler",
+      {
+        "contextFilePaths": {
+          "processing/live-server": "@wixc3/typescript-compiler-feature/dist/feature/typescript-compiler.processing.live-server.context",
+          "processing/worker": "@wixc3/typescript-compiler-feature/dist/feature/typescript-compiler.processing.worker.context"
+        },
+        "dependencies": [
+          "engine-core/communication",
+          "project",
+          "compilation",
+          "code-execution",
+          "typescript",
+          "user-application-server"
+        ],
+        "filePath": "@wixc3/typescript-compiler-feature/dist/feature/typescript-compiler.feature",
+        "envFilePaths": {
+          "main": "@wixc3/typescript-compiler-feature/dist/feature/typescript-compiler.main.env",
+          "processing": "@wixc3/typescript-compiler-feature/dist/feature/typescript-compiler.processing.env",
+          "transpilation": "@wixc3/typescript-compiler-feature/dist/feature/typescript-compiler.transpilation.env",
+          "window-renderer": "@wixc3/typescript-compiler-feature/dist/feature/typescript-compiler.window-renderer.env"
+        },
+        "preloadFilePaths": {
+          "transpilation/live-server": "@wixc3/typescript-compiler-feature/dist/feature/typescript-compiler.transpilation.live-server.preload"
+        },
+        "exportedEnvs": [
+          {
+            "name": "transpilation",
+            "flatDependencies": [],
+            "type": "webworker",
+            "childEnvName": "worker",
+            "env": {
+              "env": "transpilation",
+              "envType": "webworker",
+              "endpointType": "single",
+              "dependencies": []
+            }
+          },
+          {
+            "name": "transpilation",
+            "flatDependencies": [],
+            "type": "workerthread",
+            "childEnvName": "live-server",
+            "env": {
+              "env": "transpilation",
+              "envType": "workerthread",
+              "endpointType": "single",
+              "dependencies": []
+            }
+          }
+        ],
+        "resolvedContexts": {
+          "main": "window",
+          "processing": "worker",
+          "transpilation": "worker"
+        },
+        "packageName": "@wixc3/typescript-compiler-feature",
+        "scopedName": "typescript-compiler"
       }
     ],
     [
@@ -235,7 +298,8 @@
         "exportedEnvs": [],
         "resolvedContexts": {
           "main": "window",
-          "processing": "worker"
+          "processing": "worker",
+          "transpilation": "worker"
         },
         "packageName": "@wixc3/simulation-capabilities-feature",
         "scopedName": "simulation-capabilities"
@@ -534,8 +598,7 @@
           "code-execution",
           "css",
           "css-modules",
-          "engine-core/communication",
-          "user-application-server"
+          "engine-core/communication"
         ],
         "filePath": "@wixc3/sass-feature/dist/feature/sass.feature",
         "envFilePaths": {
@@ -734,7 +797,8 @@
         "exportedEnvs": [],
         "resolvedContexts": {
           "processing": "worker",
-          "main": "window"
+          "main": "window",
+          "transpilation": "worker"
         },
         "packageName": "@wixc3/add-panel-feature",
         "scopedName": "add-panel"
@@ -786,6 +850,7 @@
         "exportedEnvs": [],
         "resolvedContexts": {
           "processing": "worker",
+          "transpilation": "worker",
           "main": "window"
         },
         "packageName": "@wixc3/boards-panel-feature",
@@ -819,6 +884,7 @@
         "exportedEnvs": [],
         "resolvedContexts": {
           "processing": "worker",
+          "transpilation": "worker",
           "main": "window"
         },
         "packageName": "@wixc3/computed-styles-feature",
@@ -843,7 +909,8 @@
         "exportedEnvs": [],
         "resolvedContexts": {
           "processing": "worker",
-          "main": "window"
+          "main": "window",
+          "transpilation": "worker"
         },
         "packageName": "@wixc3/css-modules-editing-feature",
         "scopedName": "css-modules-editing"
@@ -868,7 +935,8 @@
         "exportedEnvs": [],
         "resolvedContexts": {
           "processing": "worker",
-          "main": "window"
+          "main": "window",
+          "transpilation": "worker"
         },
         "packageName": "@wixc3/drag-on-stage-feature",
         "scopedName": "drag-on-stage"
@@ -926,6 +994,7 @@
         "preloadFilePaths": {},
         "exportedEnvs": [],
         "resolvedContexts": {
+          "transpilation": "worker",
           "main": "window",
           "processing": "worker"
         },
@@ -978,6 +1047,7 @@
         "exportedEnvs": [],
         "resolvedContexts": {
           "processing": "worker",
+          "transpilation": "worker",
           "main": "window"
         },
         "packageName": "@wixc3/home-screen",
@@ -1032,6 +1102,7 @@
         "exportedEnvs": [],
         "resolvedContexts": {
           "processing": "worker",
+          "transpilation": "worker",
           "main": "window"
         },
         "packageName": "@wixc3/new-component-feature",
@@ -1074,7 +1145,8 @@
         "exportedEnvs": [],
         "resolvedContexts": {
           "processing": "worker",
-          "main": "window"
+          "main": "window",
+          "transpilation": "worker"
         },
         "packageName": "@wixc3/sass-editing-feature",
         "scopedName": "sass-editing"
@@ -1108,6 +1180,7 @@
         "exportedEnvs": [],
         "resolvedContexts": {
           "processing": "worker",
+          "transpilation": "worker",
           "main": "window"
         },
         "packageName": "@wixc3/props-editor-feature",
@@ -1136,6 +1209,7 @@
         "exportedEnvs": [],
         "resolvedContexts": {
           "processing": "worker",
+          "transpilation": "worker",
           "main": "window"
         },
         "packageName": "@wixc3/simulation-code-editor-feature",
@@ -1169,6 +1243,7 @@
         "exportedEnvs": [],
         "resolvedContexts": {
           "processing": "worker",
+          "transpilation": "worker",
           "main": "window"
         },
         "packageName": "@wixc3/simulation-edit-view-feature",
@@ -1195,6 +1270,7 @@
         "exportedEnvs": [],
         "resolvedContexts": {
           "processing": "worker",
+          "transpilation": "worker",
           "main": "window"
         },
         "packageName": "@wixc3/simulation-env-editor-feature",
@@ -1219,6 +1295,7 @@
         "exportedEnvs": [],
         "resolvedContexts": {
           "processing": "worker",
+          "transpilation": "worker",
           "main": "window"
         },
         "packageName": "@wixc3/simulation-log-feature",
@@ -1283,6 +1360,7 @@
         ],
         "resolvedContexts": {
           "processing": "worker",
+          "transpilation": "worker",
           "main": "window"
         },
         "packageName": "@wixc3/simulation-preview-feature",
@@ -1308,7 +1386,8 @@
         "exportedEnvs": [],
         "resolvedContexts": {
           "processing": "worker",
-          "main": "window"
+          "main": "window",
+          "transpilation": "worker"
         },
         "packageName": "@wixc3/stylable-editing-feature",
         "scopedName": "stylable-editing"
@@ -1332,7 +1411,8 @@
         "exportedEnvs": [],
         "resolvedContexts": {
           "processing": "worker",
-          "main": "window"
+          "main": "window",
+          "transpilation": "worker"
         },
         "packageName": "@wixc3/third-party-component-discovery-feature",
         "scopedName": "third-party-component-discovery"
@@ -1388,7 +1468,8 @@
         "exportedEnvs": [],
         "resolvedContexts": {
           "main": "window",
-          "processing": "live-server"
+          "processing": "live-server",
+          "transpilation": "worker"
         },
         "packageName": "@wixc3/codux-compilers-feature",
         "scopedName": "codux-compilers"
@@ -1438,6 +1519,7 @@
         "exportedEnvs": [],
         "resolvedContexts": {
           "processing": "worker",
+          "transpilation": "worker",
           "main": "window"
         },
         "packageName": "@wixc3/walkthrough-feature",
@@ -1460,7 +1542,8 @@
         "exportedEnvs": [],
         "resolvedContexts": {
           "processing": "worker",
-          "main": "window"
+          "main": "window",
+          "transpilation": "worker"
         },
         "packageName": "@wixc3/classnames-plugins-feature",
         "scopedName": "classnames-plugins"
@@ -1514,6 +1597,7 @@
         "exportedEnvs": [],
         "resolvedContexts": {
           "main": "window",
+          "transpilation": "worker",
           "processing": "worker"
         },
         "packageName": "@wixc3/typescript-assets-feature",
@@ -1588,50 +1672,6 @@
         },
         "packageName": "@wixc3/git-revisions-feature",
         "scopedName": "git-revisions"
-      }
-    ],
-    [
-      "typescript-compiler",
-      {
-        "contextFilePaths": {
-          "processing/live-server": "@wixc3/typescript-compiler-feature/dist/feature/typescript-compiler.processing.live-server.context",
-          "processing/worker": "@wixc3/typescript-compiler-feature/dist/feature/typescript-compiler.processing.worker.context"
-        },
-        "dependencies": [
-          "engine-core/communication",
-          "project",
-          "compilation",
-          "code-execution",
-          "typescript",
-          "user-application-server"
-        ],
-        "filePath": "@wixc3/typescript-compiler-feature/dist/feature/typescript-compiler.feature",
-        "envFilePaths": {
-          "main": "@wixc3/typescript-compiler-feature/dist/feature/typescript-compiler.main.env",
-          "processing": "@wixc3/typescript-compiler-feature/dist/feature/typescript-compiler.processing.env",
-          "ts-webworker": "@wixc3/typescript-compiler-feature/dist/feature/typescript-compiler.ts-webworker.env",
-          "window-renderer": "@wixc3/typescript-compiler-feature/dist/feature/typescript-compiler.window-renderer.env"
-        },
-        "preloadFilePaths": {},
-        "exportedEnvs": [
-          {
-            "name": "ts-webworker",
-            "type": "webworker",
-            "env": {
-              "env": "ts-webworker",
-              "envType": "webworker",
-              "endpointType": "multi",
-              "dependencies": []
-            },
-            "flatDependencies": []
-          }
-        ],
-        "resolvedContexts": {
-          "main": "window",
-          "processing": "worker"
-        },
-        "packageName": "@wixc3/typescript-compiler-feature",
-        "scopedName": "typescript-compiler"
       }
     ],
     [
@@ -1817,7 +1857,8 @@
         "exportedEnvs": [],
         "resolvedContexts": {
           "processing": "worker",
-          "main": "window"
+          "main": "window",
+          "transpilation": "worker"
         },
         "packageName": "@wixc3/board-to-snippet-feature",
         "scopedName": "board-to-snippet"
@@ -1841,7 +1882,8 @@
         "exportedEnvs": [],
         "resolvedContexts": {
           "main": "window",
-          "processing": "worker"
+          "processing": "worker",
+          "transpilation": "worker"
         },
         "packageName": "@wixc3/component-discovery-feature",
         "scopedName": "component-discovery"
@@ -1881,7 +1923,8 @@
         "exportedEnvs": [],
         "resolvedContexts": {
           "processing": "worker",
-          "main": "window"
+          "main": "window",
+          "transpilation": "worker"
         },
         "packageName": "@wixc3/editing-feature",
         "scopedName": "editing"
@@ -1919,7 +1962,8 @@
         "exportedEnvs": [],
         "resolvedContexts": {
           "processing": "worker",
-          "main": "window"
+          "main": "window",
+          "transpilation": "worker"
         },
         "packageName": "@wixc3/style-panel-feature",
         "scopedName": "style-panel"
