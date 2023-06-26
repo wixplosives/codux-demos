@@ -85,7 +85,8 @@
           "engine-core/communication",
           "gui",
           "engine-resources/resource",
-          "analytics"
+          "analytics",
+          "app-menu"
         ],
         "filePath": "@wixc3/project-feature/dist/feature/project.feature",
         "envFilePaths": {
@@ -233,7 +234,6 @@
         ],
         "filePath": "@wixc3/typescript-compiler-feature/dist/feature/typescript-compiler.feature",
         "envFilePaths": {
-          "main": "@wixc3/typescript-compiler-feature/dist/feature/typescript-compiler.main.env",
           "processing": "@wixc3/typescript-compiler-feature/dist/feature/typescript-compiler.processing.env",
           "transpilation": "@wixc3/typescript-compiler-feature/dist/feature/typescript-compiler.transpilation.env",
           "window-renderer": "@wixc3/typescript-compiler-feature/dist/feature/typescript-compiler.window-renderer.env"
@@ -287,7 +287,8 @@
           "simple-ast",
           "typescript",
           "typescript-compiler",
-          "file-assets"
+          "file-assets",
+          "assets"
         ],
         "filePath": "@wixc3/simulation-capabilities-feature/dist/feature/simulation-capabilities.feature",
         "envFilePaths": {
@@ -490,6 +491,22 @@
         },
         "packageName": "@wixc3/gui-feature",
         "scopedName": "gui"
+      }
+    ],
+    [
+      "app-menu",
+      {
+        "contextFilePaths": {},
+        "dependencies": [],
+        "filePath": "@wixc3/app-menu-feature/dist/feature/app-menu.feature",
+        "envFilePaths": {
+          "main": "@wixc3/app-menu-feature/dist/feature/app-menu.main.env"
+        },
+        "preloadFilePaths": {},
+        "exportedEnvs": [],
+        "resolvedContexts": {},
+        "packageName": "@wixc3/app-menu-feature",
+        "scopedName": "app-menu"
       }
     ],
     [
@@ -782,11 +799,11 @@
           "component-discovery",
           "compilation",
           "editing",
-          "file-components",
           "gui",
           "project",
           "simple-ast",
-          "wix-answers"
+          "wix-answers",
+          "simulation-capabilities"
         ],
         "filePath": "@wixc3/add-panel-feature/dist/feature/add-panel.feature",
         "envFilePaths": {
@@ -1797,7 +1814,8 @@
           "storage",
           "actions",
           "analytics",
-          "notifications"
+          "notifications",
+          "app-menu"
         ],
         "filePath": "@wixc3/project-ui-feature/dist/feature/project-ui.feature",
         "envFilePaths": {
