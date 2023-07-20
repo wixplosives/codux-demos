@@ -1121,7 +1121,6 @@
         "contextFilePaths": {},
         "dependencies": [
           "home-screen",
-          "boards-panel",
           "project",
           "gui",
           "simulation-capabilities",
