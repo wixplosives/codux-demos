@@ -86,7 +86,8 @@
           "gui",
           "engine-resources/resource",
           "analytics",
-          "app-menu"
+          "app-menu",
+          "notifications"
         ],
         "filePath": "@wixc3/project-feature/dist/feature/project.feature",
         "envFilePaths": {
@@ -494,6 +495,26 @@
       }
     ],
     [
+      "notifications",
+      {
+        "contextFilePaths": {},
+        "dependencies": [
+          "gui"
+        ],
+        "filePath": "@wixc3/notifications-feature/dist/feature/notifications.feature",
+        "envFilePaths": {
+          "main": "@wixc3/notifications-feature/dist/feature/notifications.main.env"
+        },
+        "preloadFilePaths": {},
+        "exportedEnvs": [],
+        "resolvedContexts": {
+          "main": "window"
+        },
+        "packageName": "@wixc3/notifications-feature",
+        "scopedName": "notifications"
+      }
+    ],
+    [
       "app-menu",
       {
         "contextFilePaths": {},
@@ -800,6 +821,7 @@
           "compilation",
           "editing",
           "gui",
+          "notifications",
           "project",
           "simple-ast",
           "wix-answers",
@@ -1099,7 +1121,6 @@
         "contextFilePaths": {},
         "dependencies": [
           "home-screen",
-          "boards-panel",
           "project",
           "gui",
           "simulation-capabilities",
@@ -1417,7 +1438,8 @@
         "dependencies": [
           "project",
           "add-panel",
-          "editing"
+          "editing",
+          "notifications"
         ],
         "filePath": "@wixc3/third-party-component-discovery-feature/dist/feature/third-party-component-discovery.feature",
         "envFilePaths": {
@@ -2029,32 +2051,11 @@
       }
     ],
     [
-      "notifications",
-      {
-        "contextFilePaths": {},
-        "dependencies": [
-          "gui"
-        ],
-        "filePath": "@wixc3/notifications-feature/dist/feature/notifications.feature",
-        "envFilePaths": {
-          "main": "@wixc3/notifications-feature/dist/feature/notifications.main.env"
-        },
-        "preloadFilePaths": {},
-        "exportedEnvs": [],
-        "resolvedContexts": {
-          "main": "window"
-        },
-        "packageName": "@wixc3/notifications-feature",
-        "scopedName": "notifications"
-      }
-    ],
-    [
       "board-thumbnail",
       {
         "contextFilePaths": {},
         "dependencies": [
           "code-execution",
-          "compilation",
           "engine-core/communication",
           "css",
           "sass",
