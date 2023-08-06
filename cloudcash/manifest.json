@@ -188,11 +188,11 @@
           "report-error/reporter",
           "sass-editing",
           "props-editor",
-          "simulation-code-editor",
-          "simulation-edit-view/simulation",
-          "simulation-env-editor",
-          "simulation-log",
-          "simulation-preview",
+          "board-code-editor",
+          "board-edit-view/board",
+          "board-settings",
+          "board-log",
+          "board-preview",
           "stylable-editing",
           "stylable/stylable-language-service",
           "typescript",
@@ -278,7 +278,7 @@
       }
     ],
     [
-      "simulation-capabilities",
+      "board-capabilities",
       {
         "contextFilePaths": {},
         "dependencies": [
@@ -291,10 +291,10 @@
           "file-assets",
           "assets"
         ],
-        "filePath": "@wixc3/simulation-capabilities-feature/dist/feature/simulation-capabilities.feature",
+        "filePath": "@wixc3/board-capabilities-feature/dist/feature/board-capabilities.feature",
         "envFilePaths": {
-          "main": "@wixc3/simulation-capabilities-feature/dist/feature/simulation-capabilities.main.env",
-          "processing": "@wixc3/simulation-capabilities-feature/dist/feature/simulation-capabilities.processing.env"
+          "main": "@wixc3/board-capabilities-feature/dist/feature/board-capabilities.main.env",
+          "processing": "@wixc3/board-capabilities-feature/dist/feature/board-capabilities.processing.env"
         },
         "preloadFilePaths": {},
         "exportedEnvs": [],
@@ -303,8 +303,8 @@
           "processing": "worker",
           "transpilation": "worker"
         },
-        "packageName": "@wixc3/simulation-capabilities-feature",
-        "scopedName": "simulation-capabilities"
+        "packageName": "@wixc3/board-capabilities-feature",
+        "scopedName": "board-capabilities"
       }
     ],
     [
@@ -825,7 +825,7 @@
           "project",
           "simple-ast",
           "wix-answers",
-          "simulation-capabilities"
+          "board-capabilities"
         ],
         "filePath": "@wixc3/add-panel-feature/dist/feature/add-panel.feature",
         "envFilePaths": {
@@ -878,7 +878,7 @@
           "home-screen",
           "typescript-assets",
           "analytics",
-          "simulation-capabilities",
+          "board-capabilities",
           "wix-answers"
         ],
         "filePath": "@wixc3/boards-panel-feature/dist/feature/boards-panel.feature",
@@ -909,9 +909,9 @@
           "project",
           "react-resources",
           "engine-resources/resource",
-          "simulation-edit-view/simulation",
+          "board-edit-view/board",
           "simple-ast",
-          "simulation-log",
+          "board-log",
           "wix-answers"
         ],
         "filePath": "@wixc3/computed-styles-feature/dist/feature/computed-styles.feature",
@@ -961,7 +961,7 @@
         "contextFilePaths": {},
         "dependencies": [
           "editing",
-          "simulation-edit-view/simulation",
+          "board-edit-view/board",
           "gui",
           "simple-ast"
         ],
@@ -1070,9 +1070,9 @@
         "contextFilePaths": {},
         "dependencies": [
           "gui",
-          "simulation-capabilities",
+          "board-capabilities",
           "file-components",
-          "simulation-edit-view/simulation",
+          "board-edit-view/board",
           "platform-capabilities",
           "board-thumbnail",
           "project",
@@ -1123,8 +1123,8 @@
           "home-screen",
           "project",
           "gui",
-          "simulation-capabilities",
-          "simulation-edit-view/simulation",
+          "board-capabilities",
+          "board-edit-view/board",
           "platform-capabilities",
           "simple-ast",
           "analytics",
@@ -1200,9 +1200,8 @@
           "code-views",
           "gui",
           "open-in-ide",
-          "simulation-edit-view/simulation",
+          "board-edit-view/board",
           "storage",
-          "simulation-env-editor",
           "simple-ast",
           "editing",
           "symbol-schema-extract",
@@ -1226,11 +1225,11 @@
       }
     ],
     [
-      "simulation-code-editor",
+      "board-code-editor",
       {
         "contextFilePaths": {},
         "dependencies": [
-          "simulation-edit-view/simulation",
+          "board-edit-view/board",
           "code-execution",
           "code-editor",
           "project",
@@ -1239,9 +1238,9 @@
           "actions",
           "gui"
         ],
-        "filePath": "@wixc3/simulation-code-editor-feature/dist/feature/simulation-code-editor.feature",
+        "filePath": "@wixc3/board-code-editor-feature/dist/feature/board-code-editor.feature",
         "envFilePaths": {
-          "main": "@wixc3/simulation-code-editor-feature/dist/feature/simulation-code-editor.main.env"
+          "main": "@wixc3/board-code-editor-feature/dist/feature/board-code-editor.main.env"
         },
         "preloadFilePaths": {},
         "exportedEnvs": [],
@@ -1250,12 +1249,12 @@
           "transpilation": "worker",
           "main": "window"
         },
-        "packageName": "@wixc3/simulation-code-editor-feature",
-        "scopedName": "simulation-code-editor"
+        "packageName": "@wixc3/board-code-editor-feature",
+        "scopedName": "board-code-editor"
       }
     ],
     [
-      "simulation-edit-view/simulation",
+      "board-edit-view/board",
       {
         "contextFilePaths": {},
         "dependencies": [
@@ -1265,17 +1264,17 @@
           "project",
           "project-ui",
           "symbol-schema-extract",
-          "simulation-capabilities",
-          "simulation-preview",
+          "board-capabilities",
+          "board-preview",
           "analytics",
           "storage",
           "actions",
           "wix-answers"
         ],
-        "filePath": "@wixc3/simulation-edit-view-feature/dist/feature/simulation.feature",
+        "filePath": "@wixc3/board-edit-view-feature/dist/feature/board.feature",
         "envFilePaths": {
-          "main": "@wixc3/simulation-edit-view-feature/dist/feature/simulation.main.env",
-          "preview": "@wixc3/simulation-edit-view-feature/dist/feature/simulation.preview.env"
+          "main": "@wixc3/board-edit-view-feature/dist/feature/board.main.env",
+          "preview": "@wixc3/board-edit-view-feature/dist/feature/board.preview.env"
         },
         "preloadFilePaths": {},
         "exportedEnvs": [],
@@ -1284,25 +1283,25 @@
           "transpilation": "worker",
           "main": "window"
         },
-        "packageName": "@wixc3/simulation-edit-view-feature",
-        "scopedName": "simulation-edit-view/simulation"
+        "packageName": "@wixc3/board-edit-view-feature",
+        "scopedName": "board-edit-view/board"
       }
     ],
     [
-      "simulation-env-editor",
+      "board-settings",
       {
         "contextFilePaths": {},
         "dependencies": [
           "project",
-          "simulation-edit-view/simulation",
+          "board-edit-view/board",
           "code-views",
           "simple-ast",
           "symbol-schema-extract",
           "analytics"
         ],
-        "filePath": "@wixc3/simulation-env-editor-feature/dist/feature/simulation-env-editor.feature",
+        "filePath": "@wixc3/board-settings-feature/dist/feature/board-settings.feature",
         "envFilePaths": {
-          "main": "@wixc3/simulation-env-editor-feature/dist/feature/simulation-env-editor.main.env"
+          "main": "@wixc3/board-settings-feature/dist/feature/board-settings.main.env"
         },
         "preloadFilePaths": {},
         "exportedEnvs": [],
@@ -1311,23 +1310,23 @@
           "transpilation": "worker",
           "main": "window"
         },
-        "packageName": "@wixc3/simulation-env-editor-feature",
-        "scopedName": "simulation-env-editor"
+        "packageName": "@wixc3/board-settings-feature",
+        "scopedName": "board-settings"
       }
     ],
     [
-      "simulation-log",
+      "board-log",
       {
         "contextFilePaths": {},
         "dependencies": [
-          "simulation-edit-view/simulation",
-          "simulation-preview",
+          "board-edit-view/board",
+          "board-preview",
           "platform-capabilities",
           "analytics"
         ],
-        "filePath": "@wixc3/simulation-log-feature/dist/feature/simulation-log.feature",
+        "filePath": "@wixc3/board-log-feature/dist/feature/board-log.feature",
         "envFilePaths": {
-          "main": "@wixc3/simulation-log-feature/dist/feature/simulation-log.main.env"
+          "main": "@wixc3/board-log-feature/dist/feature/board-log.main.env"
         },
         "preloadFilePaths": {},
         "exportedEnvs": [],
@@ -1336,12 +1335,12 @@
           "transpilation": "worker",
           "main": "window"
         },
-        "packageName": "@wixc3/simulation-log-feature",
-        "scopedName": "simulation-log"
+        "packageName": "@wixc3/board-log-feature",
+        "scopedName": "board-log"
       }
     ],
     [
-      "simulation-preview",
+      "board-preview",
       {
         "contextFilePaths": {},
         "dependencies": [
@@ -1351,17 +1350,17 @@
           "project",
           "compilation",
           "engine-resources/resource",
-          "simulation-capabilities",
+          "board-capabilities",
           "actions",
           "environment-info",
           "global-events",
           "http-server"
         ],
-        "filePath": "@wixc3/simulation-preview-feature/dist/feature/simulation-preview.feature",
+        "filePath": "@wixc3/board-preview-feature/dist/feature/board-preview.feature",
         "envFilePaths": {
-          "main": "@wixc3/simulation-preview-feature/dist/feature/simulation-preview.main.env",
-          "preview": "@wixc3/simulation-preview-feature/dist/feature/simulation-preview.preview.env",
-          "processing": "@wixc3/simulation-preview-feature/dist/feature/simulation-preview.processing.env"
+          "main": "@wixc3/board-preview-feature/dist/feature/board-preview.main.env",
+          "preview": "@wixc3/board-preview-feature/dist/feature/board-preview.preview.env",
+          "processing": "@wixc3/board-preview-feature/dist/feature/board-preview.processing.env"
         },
         "preloadFilePaths": {},
         "exportedEnvs": [
@@ -1401,8 +1400,8 @@
           "transpilation": "worker",
           "main": "window"
         },
-        "packageName": "@wixc3/simulation-preview-feature",
-        "scopedName": "simulation-preview"
+        "packageName": "@wixc3/board-preview-feature",
+        "scopedName": "board-preview"
       }
     ],
     [
@@ -1438,8 +1437,7 @@
         "dependencies": [
           "project",
           "add-panel",
-          "editing",
-          "notifications"
+          "editing"
         ],
         "filePath": "@wixc3/third-party-component-discovery-feature/dist/feature/third-party-component-discovery.feature",
         "envFilePaths": {
@@ -1547,7 +1545,7 @@
           "project",
           "storage",
           "gui",
-          "simulation-edit-view/simulation",
+          "board-edit-view/board",
           "platform-capabilities"
         ],
         "filePath": "@wixc3/walkthrough-feature/dist/feature/walkthrough.feature",
@@ -1692,7 +1690,10 @@
     [
       "git-revisions",
       {
-        "contextFilePaths": {},
+        "contextFilePaths": {
+          "processing/live-server": "@wixc3/git-revisions-feature/dist/feature/git-revisions.processing.live-server.context",
+          "processing/worker": "@wixc3/git-revisions-feature/dist/feature/git-revisions.processing.worker.context"
+        },
         "dependencies": [
           "project",
           "git-commands",
@@ -1707,7 +1708,7 @@
         "exportedEnvs": [],
         "resolvedContexts": {
           "main": "window",
-          "processing": "worker"
+          "processing": "live-server"
         },
         "packageName": "@wixc3/git-revisions-feature",
         "scopedName": "git-revisions"
@@ -1886,8 +1887,7 @@
         "dependencies": [
           "project",
           "simple-ast",
-          "editing",
-          "style-panel"
+          "editing"
         ],
         "filePath": "@wixc3/board-to-snippet-feature/dist/feature/board-to-snippet.feature",
         "envFilePaths": {
@@ -1910,7 +1910,7 @@
         "contextFilePaths": {},
         "dependencies": [
           "typescript-assets",
-          "simulation-capabilities",
+          "board-capabilities",
           "project"
         ],
         "filePath": "@wixc3/component-discovery-feature/dist/feature/component-discovery.feature",
@@ -1934,7 +1934,7 @@
       {
         "contextFilePaths": {},
         "dependencies": [
-          "simulation-edit-view/simulation",
+          "board-edit-view/board",
           "simple-ast",
           "typescript",
           "project",
@@ -1943,14 +1943,15 @@
           "code-execution",
           "open-in-ide",
           "symbol-schema-extract",
-          "simulation-preview",
-          "simulation-capabilities",
+          "board-preview",
+          "board-capabilities",
           "actions",
           "typescript-compiler",
           "engine-core/communication",
-          "simulation-log",
+          "board-log",
           "project-ui",
-          "react-resources"
+          "react-resources",
+          "notifications"
         ],
         "filePath": "@wixc3/editing-feature/dist/feature/editing.feature",
         "envFilePaths": {
@@ -1985,8 +1986,8 @@
           "project",
           "platform-capabilities",
           "react-resources",
-          "simulation-edit-view/simulation",
-          "simulation-log",
+          "board-edit-view/board",
+          "board-log",
           "simple-ast",
           "actions",
           "sass",
