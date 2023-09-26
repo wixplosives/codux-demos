@@ -90,7 +90,6 @@
           "computed-styles",
           "drag-on-stage",
           "environment-info",
-          "file-components",
           "file-preview",
           "gui",
           "home-screen",
@@ -283,14 +282,12 @@
       {
         "contextFilePaths": {},
         "dependencies": [
+          "board-discovery",
           "project",
-          "git-revisions",
-          "file-components",
+          "component-discovery",
           "simple-ast",
           "typescript",
-          "typescript-compiler",
-          "file-assets",
-          "assets"
+          "typescript-compiler"
         ],
         "filePath": "@wixc3/board-capabilities-feature/dist/feature/board-capabilities.feature",
         "envFilePaths": {
@@ -707,7 +704,7 @@
           "project",
           "simple-ast",
           "wix-answers",
-          "board-capabilities",
+          "board-discovery",
           "board-edit-view/board",
           "board-thumbnail"
         ],
@@ -935,7 +932,7 @@
           "home-screen",
           "typescript-assets",
           "analytics",
-          "board-capabilities",
+          "board-discovery",
           "wix-answers"
         ],
         "filePath": "@wixc3/boards-panel-feature/dist/feature/boards-panel.feature",
@@ -1140,38 +1137,6 @@
       }
     ],
     [
-      "file-components",
-      {
-        "contextFilePaths": {},
-        "dependencies": [
-          "project",
-          "simple-ast",
-          "demo-discovery",
-          "job-manager",
-          "gui",
-          "typescript-assets",
-          "typescript",
-          "file-assets",
-          "analytics",
-          "notifications"
-        ],
-        "filePath": "@wixc3/file-components-feature/dist/feature/file-components.feature",
-        "envFilePaths": {
-          "main": "@wixc3/file-components-feature/dist/feature/file-components.main.env",
-          "processing": "@wixc3/file-components-feature/dist/feature/file-components.processing.env"
-        },
-        "preloadFilePaths": {},
-        "exportedEnvs": [],
-        "resolvedContexts": {
-          "transpilation": "worker",
-          "main": "window",
-          "processing": "worker"
-        },
-        "packageName": "@wixc3/file-components-feature",
-        "scopedName": "file-components"
-      }
-    ],
-    [
       "file-preview",
       {
         "contextFilePaths": {},
@@ -1253,8 +1218,8 @@
         "contextFilePaths": {},
         "dependencies": [
           "gui",
-          "board-capabilities",
-          "file-components",
+          "board-discovery",
+          "component-discovery",
           "board-edit-view/board",
           "platform-capabilities",
           "board-thumbnail",
@@ -1268,8 +1233,8 @@
         "preloadFilePaths": {},
         "exportedEnvs": [],
         "resolvedContexts": {
-          "processing": "worker",
           "transpilation": "worker",
+          "processing": "worker",
           "main": "window"
         },
         "packageName": "@wixc3/home-screen",
@@ -1331,6 +1296,7 @@
           "project",
           "gui",
           "board-capabilities",
+          "board-discovery",
           "board-edit-view/board",
           "platform-capabilities",
           "simple-ast",
@@ -1620,16 +1586,21 @@
       }
     ],
     [
-      "file-assets",
+      "board-discovery",
       {
         "contextFilePaths": {},
         "dependencies": [
+          "discovery",
           "project",
-          "engine-resources/resource"
+          "file-assets",
+          "simple-ast",
+          "assets",
+          "git-revisions"
         ],
-        "filePath": "@wixc3/file-assets-feature/dist/feature/file-assets.feature",
+        "filePath": "@wixc3/board-discovery-feature/dist/feature/board-discovery.feature",
         "envFilePaths": {
-          "processing": "@wixc3/file-assets-feature/dist/feature/file-assets.processing.env"
+          "main": "@wixc3/board-discovery-feature/dist/feature/board-discovery.main.env",
+          "processing": "@wixc3/board-discovery-feature/dist/feature/board-discovery.processing.env"
         },
         "preloadFilePaths": {},
         "exportedEnvs": [],
@@ -1637,35 +1608,37 @@
           "main": "window",
           "processing": "worker"
         },
-        "packageName": "@wixc3/file-assets-feature",
-        "scopedName": "file-assets"
+        "packageName": "@wixc3/board-discovery-feature",
+        "scopedName": "board-discovery"
       }
     ],
     [
-      "git-revisions",
+      "component-discovery",
       {
-        "contextFilePaths": {
-          "processing/live-server": "@wixc3/git-revisions-feature/dist/feature/git-revisions.processing.live-server.context",
-          "processing/worker": "@wixc3/git-revisions-feature/dist/feature/git-revisions.processing.worker.context"
-        },
+        "contextFilePaths": {},
         "dependencies": [
+          "typescript-assets",
+          "board-discovery",
           "project",
-          "git-commands",
-          "file-assets"
+          "gui",
+          "notifications",
+          "analytics",
+          "simple-ast"
         ],
-        "filePath": "@wixc3/git-revisions-feature/dist/feature/git-revisions.feature",
+        "filePath": "@wixc3/component-discovery-feature/dist/feature/component-discovery.feature",
         "envFilePaths": {
-          "main": "@wixc3/git-revisions-feature/dist/feature/git-revisions.main.env",
-          "processing": "@wixc3/git-revisions-feature/dist/feature/git-revisions.processing.env"
+          "main": "@wixc3/component-discovery-feature/dist/feature/component-discovery.main.env",
+          "processing": "@wixc3/component-discovery-feature/dist/feature/component-discovery.processing.env"
         },
         "preloadFilePaths": {},
         "exportedEnvs": [],
         "resolvedContexts": {
+          "processing": "worker",
           "main": "window",
-          "processing": "live-server"
+          "transpilation": "worker"
         },
-        "packageName": "@wixc3/git-revisions-feature",
-        "scopedName": "git-revisions"
+        "packageName": "@wixc3/component-discovery-feature",
+        "scopedName": "component-discovery"
       }
     ],
     [
@@ -1963,31 +1936,6 @@
       }
     ],
     [
-      "component-discovery",
-      {
-        "contextFilePaths": {},
-        "dependencies": [
-          "typescript-assets",
-          "board-capabilities",
-          "project"
-        ],
-        "filePath": "@wixc3/component-discovery-feature/dist/feature/component-discovery.feature",
-        "envFilePaths": {
-          "main": "@wixc3/component-discovery-feature/dist/feature/component-discovery.main.env",
-          "processing": "@wixc3/component-discovery-feature/dist/feature/component-discovery.processing.env"
-        },
-        "preloadFilePaths": {},
-        "exportedEnvs": [],
-        "resolvedContexts": {
-          "main": "window",
-          "processing": "worker",
-          "transpilation": "worker"
-        },
-        "packageName": "@wixc3/component-discovery-feature",
-        "scopedName": "component-discovery"
-      }
-    ],
-    [
       "editing",
       {
         "contextFilePaths": {},
@@ -2135,47 +2083,6 @@
       }
     ],
     [
-      "demo-discovery",
-      {
-        "contextFilePaths": {},
-        "dependencies": [
-          "discovery",
-          "project",
-          "file-assets"
-        ],
-        "filePath": "@wixc3/demo-discovery-feature/dist/feature/demo-discovery.feature",
-        "envFilePaths": {
-          "processing": "@wixc3/demo-discovery-feature/dist/feature/demo-discovery.processing.env"
-        },
-        "preloadFilePaths": {},
-        "exportedEnvs": [],
-        "resolvedContexts": {
-          "main": "window",
-          "processing": "worker"
-        },
-        "packageName": "@wixc3/demo-discovery-feature",
-        "scopedName": "demo-discovery"
-      }
-    ],
-    [
-      "job-manager",
-      {
-        "contextFilePaths": {},
-        "dependencies": [
-          "engine-core/communication"
-        ],
-        "filePath": "@wixc3/job-manager-feature/dist/feature/job-manager.feature",
-        "envFilePaths": {
-          "processing": "@wixc3/job-manager-feature/dist/feature/job-manager.processing.env"
-        },
-        "preloadFilePaths": {},
-        "exportedEnvs": [],
-        "resolvedContexts": {},
-        "packageName": "@wixc3/job-manager-feature",
-        "scopedName": "job-manager"
-      }
-    ],
-    [
       "autodocs",
       {
         "contextFilePaths": {},
@@ -2201,27 +2108,25 @@
       }
     ],
     [
-      "git-commands",
+      "file-assets",
       {
-        "contextFilePaths": {
-          "processing/live-server": "@wixc3/git-commands-feature/dist/feature/git-commands.processing.live-server.context",
-          "processing/worker": "@wixc3/git-commands-feature/dist/feature/git-commands.processing.worker.context"
-        },
+        "contextFilePaths": {},
         "dependencies": [
-          "project"
+          "project",
+          "engine-resources/resource"
         ],
-        "filePath": "@wixc3/git-commands-feature/dist/feature/git-commands.feature",
+        "filePath": "@wixc3/file-assets-feature/dist/feature/file-assets.feature",
         "envFilePaths": {
-          "processing": "@wixc3/git-commands-feature/dist/feature/git-commands.processing.env"
+          "processing": "@wixc3/file-assets-feature/dist/feature/file-assets.processing.env"
         },
         "preloadFilePaths": {},
         "exportedEnvs": [],
         "resolvedContexts": {
           "main": "window",
-          "processing": "live-server"
+          "processing": "worker"
         },
-        "packageName": "@wixc3/git-commands-feature",
-        "scopedName": "git-commands"
+        "packageName": "@wixc3/file-assets-feature",
+        "scopedName": "file-assets"
       }
     ],
     [
@@ -2244,6 +2149,57 @@
         },
         "packageName": "@wixc3/discovery-feature",
         "scopedName": "discovery"
+      }
+    ],
+    [
+      "git-revisions",
+      {
+        "contextFilePaths": {
+          "processing/live-server": "@wixc3/git-revisions-feature/dist/feature/git-revisions.processing.live-server.context",
+          "processing/worker": "@wixc3/git-revisions-feature/dist/feature/git-revisions.processing.worker.context"
+        },
+        "dependencies": [
+          "project",
+          "git-commands",
+          "file-assets"
+        ],
+        "filePath": "@wixc3/git-revisions-feature/dist/feature/git-revisions.feature",
+        "envFilePaths": {
+          "main": "@wixc3/git-revisions-feature/dist/feature/git-revisions.main.env",
+          "processing": "@wixc3/git-revisions-feature/dist/feature/git-revisions.processing.env"
+        },
+        "preloadFilePaths": {},
+        "exportedEnvs": [],
+        "resolvedContexts": {
+          "main": "window",
+          "processing": "live-server"
+        },
+        "packageName": "@wixc3/git-revisions-feature",
+        "scopedName": "git-revisions"
+      }
+    ],
+    [
+      "git-commands",
+      {
+        "contextFilePaths": {
+          "processing/live-server": "@wixc3/git-commands-feature/dist/feature/git-commands.processing.live-server.context",
+          "processing/worker": "@wixc3/git-commands-feature/dist/feature/git-commands.processing.worker.context"
+        },
+        "dependencies": [
+          "project"
+        ],
+        "filePath": "@wixc3/git-commands-feature/dist/feature/git-commands.feature",
+        "envFilePaths": {
+          "processing": "@wixc3/git-commands-feature/dist/feature/git-commands.processing.env"
+        },
+        "preloadFilePaths": {},
+        "exportedEnvs": [],
+        "resolvedContexts": {
+          "main": "window",
+          "processing": "live-server"
+        },
+        "packageName": "@wixc3/git-commands-feature",
+        "scopedName": "git-commands"
       }
     ]
   ],
