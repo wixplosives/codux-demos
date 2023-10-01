@@ -90,6 +90,7 @@
           "computed-styles",
           "drag-on-stage",
           "environment-info",
+          "file-components",
           "file-preview",
           "gui",
           "home-screen",
@@ -1137,6 +1138,36 @@
       }
     ],
     [
+      "file-components",
+      {
+        "contextFilePaths": {},
+        "dependencies": [
+          "project",
+          "simple-ast",
+          "board-discovery",
+          "job-manager",
+          "typescript-assets",
+          "typescript",
+          "file-assets",
+          "analytics"
+        ],
+        "filePath": "@wixc3/file-components-feature/dist/feature/file-components.feature",
+        "envFilePaths": {
+          "main": "@wixc3/file-components-feature/dist/feature/file-components.main.env",
+          "processing": "@wixc3/file-components-feature/dist/feature/file-components.processing.env"
+        },
+        "preloadFilePaths": {},
+        "exportedEnvs": [],
+        "resolvedContexts": {
+          "processing": "worker",
+          "main": "window",
+          "transpilation": "worker"
+        },
+        "packageName": "@wixc3/file-components-feature",
+        "scopedName": "file-components"
+      }
+    ],
+    [
       "file-preview",
       {
         "contextFilePaths": {},
@@ -1220,6 +1251,7 @@
           "gui",
           "board-discovery",
           "component-discovery",
+          "file-components",
           "board-edit-view/board",
           "platform-capabilities",
           "board-thumbnail",
@@ -2083,6 +2115,46 @@
       }
     ],
     [
+      "file-assets",
+      {
+        "contextFilePaths": {},
+        "dependencies": [
+          "project",
+          "engine-resources/resource"
+        ],
+        "filePath": "@wixc3/file-assets-feature/dist/feature/file-assets.feature",
+        "envFilePaths": {
+          "processing": "@wixc3/file-assets-feature/dist/feature/file-assets.processing.env"
+        },
+        "preloadFilePaths": {},
+        "exportedEnvs": [],
+        "resolvedContexts": {
+          "main": "window",
+          "processing": "worker"
+        },
+        "packageName": "@wixc3/file-assets-feature",
+        "scopedName": "file-assets"
+      }
+    ],
+    [
+      "job-manager",
+      {
+        "contextFilePaths": {},
+        "dependencies": [
+          "engine-core/communication"
+        ],
+        "filePath": "@wixc3/job-manager-feature/dist/feature/job-manager.feature",
+        "envFilePaths": {
+          "processing": "@wixc3/job-manager-feature/dist/feature/job-manager.processing.env"
+        },
+        "preloadFilePaths": {},
+        "exportedEnvs": [],
+        "resolvedContexts": {},
+        "packageName": "@wixc3/job-manager-feature",
+        "scopedName": "job-manager"
+      }
+    ],
+    [
       "autodocs",
       {
         "contextFilePaths": {},
@@ -2105,28 +2177,6 @@
         },
         "packageName": "@wixc3/autodocs-feature",
         "scopedName": "autodocs"
-      }
-    ],
-    [
-      "file-assets",
-      {
-        "contextFilePaths": {},
-        "dependencies": [
-          "project",
-          "engine-resources/resource"
-        ],
-        "filePath": "@wixc3/file-assets-feature/dist/feature/file-assets.feature",
-        "envFilePaths": {
-          "processing": "@wixc3/file-assets-feature/dist/feature/file-assets.processing.env"
-        },
-        "preloadFilePaths": {},
-        "exportedEnvs": [],
-        "resolvedContexts": {
-          "main": "window",
-          "processing": "worker"
-        },
-        "packageName": "@wixc3/file-assets-feature",
-        "scopedName": "file-assets"
       }
     ],
     [
